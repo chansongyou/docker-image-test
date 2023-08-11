@@ -1,0 +1,31 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta:__legacy__"
+
+[project]
+name = "docker-image-test"
+version = "0.0.1"
+description = "project to test docker image making"
+readme = "README.md"
+requires-python = "==3.10.*"
+authors = [
+    { name = "Chansong You", email = "dbcksthd13@gmail.com" }
+]
+
+dependencies = [
+    "python-dotenv",
+]
+
+[project.urls]
+source = "https://github.com/chansongyou/docker-image-test"
+
+[project.optional-dependencies]
+dev = [
+    "notebook",
+]
+
+[tools.setuptools]
+packages = ["src",]
+
+[tool.black]
+line-length = 100
